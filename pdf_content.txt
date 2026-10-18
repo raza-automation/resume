@@ -1,150 +1,88 @@
-Wasim Akhtar
-Noida, Uttar Pradesh, India
-
-     wasim.akh2@gmail.com
-
-     linkedin.com/in/wasim-akhtar-3b7436b                                                   M: +91 9718742936
+Waseem Raza
+QA Automation Engineer | New Delhi, National Capital Territory of Delhi, New Delhi, 110025, India
+waseem.razain@gmail.com | +91 9910813336 | linkedin.com/in/waseem-raza-in | github.com/raza-automation
 
 
-Summary
-Results-driven Technical Analyst with nine years of experience in software analysis, design, development,
-debugging, and maintenance of enterprise web applications. Proficient in a wide range of technologies,
-including Azure, AWS, Dot Net Core, CI/CD, MAU , C#, SQL Server, ASP.net MVC, GIT, Agile, Docker Blazor
-and more. Microsoft Professional and AWS Certified Cloud Practitioner. Self-motivated and collaborative
-team player focused on delivering high-quality solutions.
+PROFESSIONAL SUMMARY
+QA Automation Engineer with hands-on experience in manual and automated testing across E-Commerce,
+B2B, Banking, Healthcare and Energy domains. Skilled in designing and maintaining hybrid automation
+frameworks with Selenium WebDriver, Java, Appium, Playwright with TypeScript, TestNG, Maven and the
+Page Object Model; functional, regression, smoke, sanity, integration, end-to-end, cross-browser and
+accessibility testing; API testing with Postman and Bruno; and CI/CD with Jenkins and GitHub Actions.
 
 
-Experience
-    Technical Lead
-    Coforge
-    Mar 2022 - Present (3 year 11 months)
-    - Lead full-stack project development using Blazor with Radzen, focusing on Azure, AWS,
-    Dot Net Core, CI/CD , C#, SQL Server, ASP.net MVC, React, Apache Kafka ,Microservices, GIT, and Agile
-    methodologies. Along with Blazor Web Assembly and Blazor Server Client Architecture.
-    - Provide development, support, and DevOps services for a successful implementation.
-    - Collaborate effectively with developers and end-users to deliver client-centered solutions.
-    - Proficiently utilize technologies such as Mobile Backend API, Linux, Jira, Docker, and RDLC.
+TECHNICAL SKILLS
+Automation Testing: Selenium WebDriver, Appium, Playwright, TestNG, Maven, Page Object Model (POM),
+Hybrid Automation Framework Design and Maintenance, Automated Test Script Development
+Testing Types: Manual Testing, Functional Testing, Regression Testing, Smoke Testing, Sanity Testing,
+Integration Testing, End-to-End Testing, Cross-Browser Compatibility Testing, Accessibility Testing,
+API Testing, Mobile Application Testing (Native, Hybrid, Web-Based; APK, iOS)
+Tools, Programming and Database: Postman, Bruno, JIRA, Jenkins, Git, GitHub, GitHub Actions, MS Excel,
+GitHub Copilot, Java, TypeScript, SQL, MySQL, XPath, CSS Selectors, Flutter
+Process and Methodologies: Test Plan and Test Case Design, Test Case Review, Test Scenarios, Test
+Execution, Test Reporting, Test Summary Reports, Requirement Analysis, Defect Logging and Reporting,
+SDLC, STLC, Agile, Scrum, CI/CD
 
 
-    Software Engineer III
-    Concentrix
-    Jan 2020 - Feb 2022 (2 years 2 months)
-    - Played a key role in backend project (Web API) development, support, and DevOps.
-    - Utilized Azure, AWS, Dot Net Core, CI/CD, C#, AWS CloudWatch, SQL Server, ASP.net MVC,
-    and Agile methodologies.
-    - Strengthened team collaboration and contributed to successful project outcomes.
+PROFESSIONAL EXPERIENCE
+
+QA Automation Engineer
+DigiExcel Services, New Friends Colony, New Delhi, India
+Jun 2022 - Present
+- Design, develop and maintain automated test scripts using Selenium WebDriver and Appium for web and mobile apps.
+- Develop and enhance a hybrid automation framework using Maven, TestNG and the Page Object Model, with XPath and CSS selectors for dynamic objects.
+- Create detailed, comprehensive and well-structured test plans and test cases.
+- Perform functional, integration and regression testing to ensure software quality across releases.
+- Execute automated tests, analyze results and report findings to relevant teams.
+- Collaborate with development teams to create and implement testing strategies.
+
+QA Engineer
+i3Infosoft Pvt Ltd, India (Remote)
+Aug 2019 - Jun 2022
+- Designed, developed and executed comprehensive test plans to ensure software quality.
+- Collaborated with development teams to identify, report, and troubleshoot software defects.
+- Maintained and updated test cases for new software features, and performed manual testing to validate user interface and user experience quality.
+- Participated in Agile/Scrum ceremonies and contributed to sprint planning with QA perspective.
 
 
+PROJECTS
 
-    Software Engineer II
-    Concentrix
-    Aug 2016 - Dec 2019 (3 years 5 months)
-    - Managed entire SDLC process from requirement gathering to deployment.
-    - Provided expertise in technologies like C#, WPF, Entity Framework, EHLLAPI, SQL Server,
-    ASP.net MVC, and GIT.
-    - Advised colleagues on optimal market solutions and handled Python projects.
+BitsProof - Proof of ID Platform (Current)
+Tools: Playwright, TypeScript, Postman, Bruno, GitHub Actions
+- Automate end-to-end regression for the customer portal and admin console with Playwright and TypeScript across Chromium, Firefox and WebKit, gated in GitHub Actions on every pull request.
+- Cover sign-in, MFA setup with TOTP and role-based permissions for admin, owner, manager and basic users, plus WebSocket approval notifications and document-share requests.
+- Design and execute mobile test plans for the Flutter app on Android and iOS: ID capture with OCR extraction, document expiry, one-time QR codes, OTP rate limiting, session invalidation and back-button navigation.
+- Validate REST APIs with Postman and Bruno across roles - authentication, MFA-gated sessions, device tracking and audit logs - checking status codes and payloads against database state.
+- Report defects per GitHub issue with repro-video evidence and acceptance-criteria traceability, and maintain the Flutter regression and end-to-end suites.
 
+TP-Link (B2B) - Loyalty Platform
+Tools: Java, Selenium, TestNG, Maven, Postman, MySQL, JIRA
+- Test partner registration and onboarding end to end: dependent state and city dropdowns, PAN, GSTIN and pincode validation and terms-and-conditions gating.
+- Validate the scheme, rebate and claim lifecycle: participation, multi-step claim submission, approvals, rewards history, rebate targets and bulk sales uploads.
+- Verify role-based access for partners, sales persons, RSMs and admins with MFA setup, audit logs and push, WhatsApp and email notifications on the mobile-first PWA.
+- Validate REST API requests with Postman, verify sales-trend, product-performance, city-wise and vertical-wise report accuracy, and automate regression cases with Java, Selenium and TestNG.
 
+Pharmacy Website
+Tools: Java, Selenium, TestNG, Maven, Postman, MySQL, JIRA, MS Excel
+- Perform functional, regression, smoke, sanity, integration, compatibility and accessibility testing.
+- Design and develop automation scripts using Java, Selenium and TestNG, with XPath and CSS expressions for identifying dynamic objects.
 
-    Senior System Analyst
-    Artech L.L.C.
-    Jun 2015 - Aug 2016 (1 year 3 months)
-    - Led the SDLC process, covering requirement gathering, development, and deployment.
-    - Offered insights and guidance to colleagues on effective market solutions.
-
-    Wasim Akhtar - page 1
-   - Utilized VBA, Excel, Ms Access, and EHLLAPI for efficient system analysis.
-
-
-   Mis Executive
-   Jabong
-   Oct 2014 - Jun 2015 (9 months)
-   - Applied skills in Excel, VBA, and Access to optimize data management processes.
-
-
-   Sr Practitioner
-   IBM
-   Oct 2012 - Oct 2014 (2 years 1 month)
-   - Developed VBA Macros and solutions to enhance operational efficiency.
+Ring Master - Claims Audit and Filing Tool
+Tools: Java, Selenium, TestNG, Postman, MySQL, JIRA
+- Test the claims auditing workflow end to end: audit queue and claim selection, the audit form with its mandatory fields and validation rules, and submission of the completed audit details.
+- Validate the audit form behaviour and data handling: field-level validation messages, required-field enforcement, and the audit record and filing status produced by each submission.
+- Verify role-based access for auditor and admin users, and confirm submitted reimbursements and audit details are reflected correctly in claim records and reports.
+- Design and review test cases, test scenarios and test summary reports, log defects with proper root cause by analyzing application logs, and track them to closure in JIRA.
+- Execute functional, cross-browser and API testing with Postman, and design and maintain the automation suite using Java, Selenium and TestNG.
 
 
-Education
-   Karnataka State Open University
-   Master of Computer Applications - MCA, Computer Science
-   Jan 2014 - Feb 2016
+EDUCATION
+Bachelor of Computer Applications, Computer Science - Indira Gandhi National Open University
 
 
-   Indira Gandhi National Open University
-   bca, computer
-   2007 - 2010
-   Bachlore of Computer Application
+CERTIFICATIONS
+Advanced Java | Advanced Excel with MIS Reporting and Dashboard
 
 
-Licenses & Certifications
-   Six Sigma Yellow Belt - Concentrix
-   YB/06/2016/924499
-
-
-   AWS Certified Cloud Practitioner - Amazon Web Services (AWS)
-   Issued Nov 2021 - Expires Nov 2024
-   BT986BBJEB11QFK5
-
-
-   15 Secrets Successful People Know about Time Management (getAbstract
-   Summary) - LinkedIn
-
-
-   Avoiding Burnout - LinkedIn
-
-   C# (Basic) Certificate - HackerRank
-   a48ea6435c3b
-
-
-   ASP.NET Core: Test-Driven Development - LinkedIn
-
-
-
-                                            Wasim Akhtar - page 2
-    Building Real-Time Web Apps with SignalR 2 - LinkedIn
-
-    Become an ASP.NET Developer - LinkedIn
-
-
-    Deploying Your AWS Application to the Cloud with Docker
-                                                                  - LinkedIn
-
-    Learning Amazon Web Services (AWS) for Developers - LinkedIn
-
-
-    Learning ASP.NET Core MVC - LinkedIn
-
-
-    ASP.NET Core: Razor Pages - LinkedIn
-
-
-    ASP.NET Core New Features - LinkedIn
-
-
-    Postman Essential Training - LinkedIn
-
-
-    ML.NET: Getting Started - LinkedIn
-
-
-Skills
- Angular • WebAssembly • Azure Kubernetes Service (AKS) • Kubernetes • Maui • ADO.NET •
-  Object-Oriented Programming (OOP) • Web Services • REST APIs • Visual Basic .NET (VB.NET)
-
-
-Honors & Awards
-    Automation Wizard - Concentrix
-    May 2016
-
-
-    Hunsung Hero - Concentrix
-
-
-
-
-                                      Wasim Akhtar - page 3
-
+PERSONAL DETAILS
+Languages: English, Hindi | Date of birth: 01 Feb 1989 | Nationality: Indian | Marital status: Married

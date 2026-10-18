@@ -1,113 +1,97 @@
 # Resume PDF Generation Walkthrough
 
-## Issue: BasicTeX Installation
+How to compile `resume.tex` and `resume_v2.tex` into PDFs, including the package set that is actually required and the failure modes seen on a minimal TeX Live install.
 
-The `pdflatex` command is not found because BasicTeX is installed but the package hasn't been fully set up yet.
+## Required packages
 
-## Solution Steps
+Both documents use a deliberately tiny, ATS-friendly package set:
 
-### Step 1: Install BasicTeX Package (Requires Password)
+| Package | Used for | Debian/Ubuntu package |
+| --- | --- | --- |
+| `geometry` | page margins (0.45 in) | `texlive-latex-base` |
+| `hyperref` | clickable email/URL links (`hidelinks` — no coloured boxes) | `texlive-latex-recommended` |
+| `microtype` | `\DisableLigatures` — see *ATS-specific settings* below | `texlive-latex-recommended` |
+| `enumitem` | en-dash bullet label and list spacing | `texlive-latex-extra` |
 
-**Option A - Quick Install (Recommended):**
-```bash
-# Run this command and enter your password when prompted
-sudo installer -pkg /opt/homebrew/Caskroom/basictex/2025.0308/mactex-basictex-20250308.pkg -target /
-```
+`hyperref` pulls in `letltxmacro` (also `texlive-latex-extra` on older releases), so a TeX Live install that stops at `texlive-latex-base` fails on `enumitem.sty` first and on `letltxmacro.sty` second. Installing `texlive-latex-extra` resolves both.
 
-**Option B - Reinstall via Brew:**
-```bash
-# This will also prompt for your password
-brew reinstall basictex
-```
+## ATS-specific settings
 
-### Step 2: Update PATH
+These are the parts of the preamble that exist purely for machine parsing. Changing them changes the ATS score, and some of them change the page count.
 
-After installation, reload your shell environment:
+| Setting | Why |
+| --- | --- |
+| `\usepackage{microtype}` + `\DisableLigatures{encoding = OT1, family = *}` | In OT1, `fi`/`ff`/`ffl` are single font glyphs that PDF text extraction returns as `U+FB01`/`U+FB00`, so "Certifications", "findings" or "identifying" stop matching the plain ASCII keywords an ATS looks for. Disabling ligatures restores plain `f`+`i` in the extracted text while looking identical in print. Side effect: `--` no longer becomes an en dash, which is why bullets are set with `label={\textendash}` and date ranges with `\textendash`. |
+| Contact block as body text | Location, email, phone, LinkedIn and GitHub are ordinary text lines, not a header/footer or text box, and the LinkedIn/GitHub URLs are printed as visible text so a parser that ignores link annotations still sees them. |
+| `margin=0.45in`, `itemsep=0pt`, `\sectionheader` at `\normalsize` | Fits the full content (summary, six skill groups, both roles, two projects, education, certifications, personal details) onto **one page**. Loosening any of them spills the tail sections onto a second page. |
+| Conventional headings | `Professional Summary`, `Technical Skills`, `Professional Experience`, `Projects`, `Education`, `Certifications`, `Personal Details` — the exact strings ATS section mapping expects. |
 
-```bash
-# Method 1: Run path helper
-eval "$(/usr/libexec/path_helper)"
-
-# Method 2: Or restart your terminal completely
-```
-
-### Step 3: Verify Installation
-
-Check that pdflatex is now available:
+Verify the result after any change:
 
 ```bash
-which pdflatex
-pdflatex --version
+python3 ats_score.py resume.pdf resume_v2.pdf   # parses the PDF and prints the 8-axis score
+pdfinfo resume.pdf | grep Pages                 # must stay at 1
 ```
 
-### Step 4: Compile Resume
 
-Once pdflatex is working:
 
 ```bash
-# Navigate to your resume directory
-cd /Volumes/WasimSSD/aahanatech/resume
+# one-time setup (Ubuntu 20.04 verified)
+sudo apt-get update
+sudo apt-get install -y --no-install-recommends \
+    texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
 
-# Compile the resume
-pdflatex resume.tex
-
-# If there are warnings about packages, run again:
-pdflatex resume.tex
+# build
+pdflatex -interaction=nonstopmode -halt-on-error resume.tex
+pdflatex -interaction=nonstopmode -halt-on-error resume_v2.tex
 ```
 
-## Alternative: Online LaTeX Editor
+Each document compiles in a single pass — there is no bibliography, cross-reference, or index. Expected result: exit status `0` and one-page PDFs.
 
-If you prefer not to install BasicTeX locally, you can use **Overleaf**:
+If `enumitem.sty` is reported missing and installing `texlive-latex-extra` is not an option, drop the single style file into your user tree instead:
 
-1. Go to https://www.overleaf.com
-2. Create a free account
-3. Upload `resume.tex`
-4. Click "Recompile" to generate PDF
-5. Download the PDF
+```bash
+mkdir -p ~/texmf/tex/latex/enumitem
+curl -L -o ~/texmf/tex/latex/enumitem/enumitem.sty \
+  https://mirrors.ctan.org/macros/latex/contrib/enumitem/enumitem.sty
+texhash ~/texmf   # optional; kpathsea picks up ~/texmf automatically
+```
 
-## Updated Resume Styling
+Note that the `enumitem` on CTAN also needs `letltxmacro.sty` (oberdiek bundle) when `hyperref` is loaded.
 
-The `resume.tex` file has been updated with:
+## Build on Windows (MiKTeX or TeX Live)
 
-- **Clean, professional layout** matching the reference PDF style
-- **Proper section formatting** with bold headers and rules
-- **Consistent spacing** and typography
-- **Hyperlinked contact information** (email, LinkedIn, GitHub)
-- **Two-page optimized layout** for better readability
+```powershell
+pdflatex -interaction=nonstopmode -halt-on-error resume.tex
+pdflatex -interaction=nonstopmode -halt-on-error resume_v2.tex
+```
 
-### Key Changes Made:
+MiKTeX installs missing packages on demand; TeX Live users should run `tlmgr install enumitem letltxmacro`.
 
-1. Switched from `moderncv` class to standard `article` class for cleaner look
-2. Removed fancy fonts and icons for ATS compatibility
-3. Improved job entry formatting with consistent date ranges
-4. Reorganized skills section for better scannability
-5. Added proper page breaks and spacing
+## Keeping the source files out of the build directory
+
+`pdflatex` writes `resume.aux`, `resume.log`, and `resume.out` next to the source. These are throwaway build artifacts — delete them (or compile with `-output-directory=build`) before committing.
+
+## Alternative: Overleaf
+
+1. Go to https://www.overleaf.com and create a free account.
+2. Create a new project and upload `resume.tex` (and `resume_v2.tex`).
+3. Click **Recompile** to generate the PDF and download it.
+
+Overleaf ships a full TeX Live, so no package installation is needed there.
+
+## CI
+
+`.github/workflows/build-resume.yml` compiles both documents with `xu-cheng/latex-action` on every push to `master`/`main` that touches a `.tex` file, renames the outputs to `Waseem_Raza_Resume.pdf` / `Waseem_Raza_Resume_v2.pdf`, uploads them as artifacts, and commits them back to the repository on pushes to `master`. Tagging a release attaches both PDFs to the release.
 
 ## Troubleshooting
 
-### Error: "pdflatex: command not found"
-
-**Fix:** Run the install command from Step 1 above and restart your terminal.
-
-### Error: "File moderncv.cls not found"
-
-**Fix:** The updated `resume.tex` no longer uses `moderncv`. If you have an old version, use the new one that uses standard `article` class.
-
-### Error: "Missing packages"
-
-BasicTeX is a minimal distribution. If you get missing package errors:
-
-```bash
-# Use tlmgr to install missing packages
-sudo tlmgr install <package-name>
-
-# Or switch to full MacTeX (much larger install)
-brew install --cask mactex
-```
-
-## Generated PDF Location
-
-After successful compilation, the PDF will be created as:
-```
-/Volumes/WasimSSD/aahanatech/resume/resume.pdf
-```
+| Symptom | Cause | Fix |
+| --- | --- | --- |
+| `File 'enumitem.sty' not found` | base TeX Live only | install `texlive-latex-extra` (or the single CTAN file) |
+| `File 'letltxmacro.sty' not found` | `hyperref` dependency not installed | install `texlive-latex-extra` |
+| `pdflatex: command not found` | no TeX distribution on `PATH` | install TeX Live/MiKTeX, or compile on Overleaf |
+| PDF missing links | `hyperref` not loaded or driver mismatch | keep `\usepackage[hidelinks]{hyperref}` and compile with `pdflatex` |
+| Resume spills onto a second page | content grew or spacing was loosened | tighten `margin`, `\sectionheader` `\vspace`, or `itemsep`; or drop the weakest bullet — verify with `pdfinfo resume.pdf` |
+| ATS cannot match "Certifications"/"identifying" | `fi`/`ff` ligature glyphs (`U+FB01`) in the extracted text | keep `microtype` + `\DisableLigatures{encoding = OT1, family = *}` in the preamble |
+| Bullets extract as `--` instead of `–` | `\DisableLigatures` also disables the OT1 `--` ligature | keep `label={\textendash}` in `\setlist[itemize]` |

@@ -1,37 +1,47 @@
 %----------------------------------------------------------------------------------------
-% ATS-Optimized Resume Template - 95%+ ATS Compatible
+% ATS-Optimized Resume - Waseem Raza, QA Automation Engineer
 % NO graphics, NO columns, NO tables - Pure text for maximum ATS parsing
+% Contact URLs are printed as visible text (ATS parsers read text, not link annotations)
 %----------------------------------------------------------------------------------------
 
 \documentclass[10pt,a4paper]{article}
 
 % ATS-Friendly Packages Only
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.6in]{geometry}
+\usepackage[margin=0.45in]{geometry}
 \usepackage{enumitem}
-\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% ATS: stop 'fi'/'ff' ligature glyphs (they extract as U+FB01 and break keyword matching)
+\DisableLigatures{encoding = OT1, family = *}
 
 % ATS-Optimized Settings
 \pagestyle{empty}
-\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, parsep=0pt, topsep=2pt, label={--}}
+\setlist[itemize]{leftmargin=1.2em, itemsep=0pt, parsep=0pt, topsep=0pt, label={\textendash}}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 
-% Simple section formatting - ATS loves clear headers
+% Section formatting - ATS loves clear headers; rule weight sets heading hierarchy
 \newcommand{\sectionheader}[1]{%
-    \vspace{8pt}
-    {\large\bfseries #1}
-    \vspace{2pt}
-    \hrule
     \vspace{4pt}
+    {\normalsize\bfseries #1}
+    \vspace{1pt}
+    \hrule height 0.8pt
+    \vspace{3pt}
 }
 
 % Job entry format - clean and scannable
 \newcommand{\jobentry}[3]{%
-    \vspace{4pt}
+    \vspace{1pt}
     {\normalsize\bfseries #1} \hfill #2\\
     \textit{#3}
 }
+
+% Separator between two entry blocks inside a section (job -> job, project -> project):
+% a hairline rule with breathing room above and below. A blank line in the source does
+% nothing here because \parskip is 0pt, so the separation is explicit.
+\newcommand{\entrysep}{\vspace{3pt}\hrule width \hsize height 0.3pt\vspace{5pt}}
 
 %----------------------------------------------------------------------------------------
 % DOCUMENT BEGINS
@@ -40,16 +50,16 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-% HEADER - Single line format for ATS
+% HEADER - Single column, plain text contact block
 %----------------------------------------------------------------------------------------
 
 \begin{center}
-    {\LARGE\bfseries Wasim Akhtar}\\[4pt]
-    Noida, Uttar Pradesh, India | \href{mailto:wasim.akh2@gmail.com}{wasim.akh2@gmail.com} | +91 9718742936\\
-    \href{https://linkedin.com/in/wasim-akhtar-3b7436b}{LinkedIn} | \href{https://github.com/wasimakh2}{GitHub}
+    {\LARGE\bfseries Waseem Raza}\\[3pt]
+    QA Automation Engineer | New Delhi, National Capital Territory of Delhi, New Delhi, 110025, India\\
+    \href{mailto:waseem.razain@gmail.com}{waseem.razain@gmail.com} | +91 9910813336 | \href{https://www.linkedin.com/in/waseem-raza-in}{linkedin.com/in/waseem-raza-in} | \href{https://github.com/raza-automation}{github.com/raza-automation}
 \end{center}
 
-\vspace{2pt}
+\vspace{1pt}
 
 %----------------------------------------------------------------------------------------
 % PROFESSIONAL SUMMARY
@@ -57,7 +67,7 @@
 
 \sectionheader{Professional Summary}
 
-Results-driven Senior System Analyst and Technical Lead with 12+ years of experience in software development, cloud architecture, and DevOps. Expert in .NET 8, C\# 11, ASP.NET, Blazor, Telerik, Azure, AWS, Docker, Kubernetes, and service-oriented architecture (SOA). Strong analytical skills with proven track record leading cross-functional teams, delivering scalable enterprise solutions across cloud and on-premises environments. Passionate about unit testing, multithreading, CI/CD pipelines, and desktop application development.
+QA Automation Engineer with hands-on experience in manual and automated testing across E-Commerce, B2B, Banking, Healthcare and Energy domains. Skilled in designing and maintaining hybrid automation frameworks with Selenium WebDriver, Java, Appium, Playwright with TypeScript, TestNG, Maven and the Page Object Model; functional, regression, smoke, sanity, integration, end-to-end, cross-browser and accessibility testing; API testing with Postman and Bruno; and CI/CD with Jenkins and GitHub Actions.
 
 %----------------------------------------------------------------------------------------
 % TECHNICAL SKILLS - Single column list for ATS parsing
@@ -65,19 +75,13 @@ Results-driven Senior System Analyst and Technical Lead with 12+ years of experi
 
 \sectionheader{Technical Skills}
 
-\textbf{Programming Languages:} \textbf{C\# 11 (C-Sharp)}, \textbf{Python}, \textbf{VBA}, \textbf{Visual Basic .NET}, \textbf{JavaScript}\\[2pt]
+\textbf{Automation Testing:} Selenium WebDriver, Appium, Playwright, TestNG, Maven, Page Object Model (POM), Hybrid Automation Framework Design and Maintenance, Automated Test Script Development\\[1pt]
 
-\textbf{Frameworks and Libraries:} \textbf{.NET 8}, \textbf{.NET Core}, \textbf{ASP.NET MVC}, \textbf{Entity Framework}, \textbf{Blazor}, \textbf{Telerik UI for Blazor}, \textbf{Angular}, \textbf{MAUI}, \textbf{SignalR}, \textbf{ML.NET}, \textbf{WebAssembly}, \textbf{REST APIs}, \textbf{SOAP}, \textbf{gRPC}\\[2pt]
+\textbf{Testing Types:} Manual Testing, Functional Testing, Regression Testing, Smoke Testing, Sanity Testing, Integration Testing, End-to-End Testing, Cross-Browser Compatibility Testing, Accessibility Testing, API Testing, Mobile Application Testing (Native, Hybrid, Web-Based; APK, iOS)\\[1pt]
 
-\textbf{Cloud Platforms:} \textbf{Microsoft Azure}, \textbf{Amazon Web Services (AWS)}, \textbf{Azure Kubernetes Service (AKS)}, \textbf{AWS CloudWatch}, \textbf{Azure Entra ID}, \textbf{Azure Key Vault}, \textbf{Azure Blob Storage}, \textbf{Azure CDN}, \textbf{Azure Service Bus}, \textbf{Azure Event Grid}\\[2pt]
+\textbf{Tools, Programming and Database:} Postman, Bruno, JIRA, Jenkins, Git, GitHub, GitHub Actions, MS Excel, GitHub Copilot, Java, TypeScript, SQL, MySQL, XPath, CSS Selectors, Flutter\\[1pt]
 
-\textbf{DevOps and Tools:} \textbf{Docker}, \textbf{Kubernetes}, \textbf{Helm Charts}, \textbf{CI/CD Pipelines}, \textbf{Azure DevOps}, \textbf{Git}, \textbf{Jira}, \textbf{IIS}, \textbf{HeadLamp}, \textbf{FreeLens}, \textbf{GitHub Actions}\\[2pt]
-
-\textbf{Databases:} \textbf{SQL Server}, \textbf{MS Access}, \textbf{ADO.NET}, \textbf{Entity Framework Core}, \textbf{Dapper}, \textbf{Redis}, \textbf{LINQ}\\[2pt]
-
-\textbf{Architecture and Methodologies:} \textbf{Microservices Architecture}, \textbf{Service-Oriented Architecture (SOA)}, \textbf{Object-Oriented Programming (OOP)}, \textbf{Test-Driven Development (TDD)}, \textbf{Unit Testing (xUnit, NUnit, MSTest)}, \textbf{Multithreading}, \textbf{Agile}, \textbf{Scrum}, \textbf{SDLC}, \textbf{MVVM Pattern}\\[2pt]
-
-\textbf{Other Technologies:} \textbf{WPF}, \textbf{WinForms}, \textbf{Desktop Application Development}, \textbf{On-Premises Deployment}, \textbf{RDLC Reporting}, \textbf{EHLLAPI}, \textbf{Radzen}, \textbf{Telerik}, \textbf{Prism Framework}, \textbf{JWT Authentication}, \textbf{OAuth 2.0}
+\textbf{Process and Methodologies:} Test Plan and Test Case Design, Test Case Review, Test Scenarios, Test Execution, Test Reporting, Test Summary Reports, Requirement Analysis, Defect Logging and Reporting, SDLC, STLC, Agile, Scrum, CI/CD
 
 %----------------------------------------------------------------------------------------
 % PROFESSIONAL EXPERIENCE
@@ -85,86 +89,69 @@ Results-driven Senior System Analyst and Technical Lead with 12+ years of experi
 
 \sectionheader{Professional Experience}
 
-\jobentry{Technical Lead}{Mar 2022 -- Present (3 years 11 months)}{Coforge, Noida, India (Client: SITA)}
+\jobentry{QA Automation Engineer}{Jun 2022 \textendash\ Present}{DigiExcel Services, New Friends Colony, New Delhi, India}
 
-\textbf{Airside Optimizer System -- Technical Lead, Full-Stack .NET Developer}
 \begin{itemize}
-    \item Leading development of comprehensive \textbf{Airside Optimizer System} using \textbf{C\# 11}, \textbf{.NET 8}, and \textbf{ASP.NET} for airport ground operations optimization and resource management
-    \item Built \textbf{Deicing Module} with \textbf{multithreading} for concurrent fluid tracking, deicing operations, and compliance reporting
-    \item Architected \textbf{service-oriented architecture (SOA)} using \textbf{Blazor}, \textbf{Telerik UI for Blazor}, \textbf{Azure Service Bus}, and \textbf{SignalR} for real-time operational updates
-    \item Implemented comprehensive \textbf{unit testing} with \textbf{xUnit} and \textbf{NUnit} achieving 85 percent code coverage across all modules
-    \item Deployed on \textbf{Azure Kubernetes Service} and \textbf{on-premises} environments with \textbf{Docker}, \textbf{Helm Charts}, and automated \textbf{CI/CD pipelines}
+    \item Design, develop and maintain automated test scripts using Selenium WebDriver and Appium for web and mobile apps.
+    \item Develop and enhance a hybrid automation framework using Maven, TestNG and the Page Object Model, with XPath and CSS selectors for dynamic objects.
+    \item Create detailed, comprehensive and well-structured test plans and test cases.
+    \item Perform functional, integration and regression testing to ensure software quality across releases.
+    \item Execute automated tests, analyze results and report findings to relevant teams.
+    \item Collaborate with development teams to create and implement testing strategies.
 \end{itemize}
 
-\textbf{Media Manager -- Full-Stack .NET Developer, DevOps Engineer}
+\entrysep
+\jobentry{QA Engineer}{Aug 2019 \textendash\ Jun 2022}{i3Infosoft Pvt Ltd, India (Remote)}
+
 \begin{itemize}
-    \item Built airport configuration platform using \textbf{Blazor}, \textbf{Radzen}, \textbf{.NET 8}, \textbf{REST APIs}, \textbf{SOAP} services, and \textbf{gRPC} for microservices communication
-    \item Deployed on \textbf{Azure Kubernetes Service} and \textbf{on-premises} infrastructure with \textbf{Docker} containers, \textbf{Helm Charts}, and \textbf{CI/CD pipelines} achieving 99.9 percent uptime
-    \item Integrated \textbf{Azure Entra ID} authentication with \textbf{App Registration} for enterprise security, \textbf{Azure Key Vault} for secrets, and \textbf{Azure Blob Storage} for asset management
+    \item Designed, developed and executed comprehensive test plans to ensure software quality.
+    \item Collaborated with development teams to identify, report, and troubleshoot software defects.
+    \item Maintained and updated test cases for new software features, and performed manual testing to validate user interface and user experience quality.
+    \item Participated in Agile/Scrum ceremonies and contributed to sprint planning with QA perspective.
 \end{itemize}
 
-\textbf{Electronic Flight Strip System -- .NET Developer, Cloud Developer}
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
+
+\sectionheader{Projects}
+
+\textbf{BitsProof \textendash\ Proof of ID Platform (Current)} \hfill \textit{Playwright, TypeScript, Postman, Bruno, GitHub Actions}
+
 \begin{itemize}
-    \item Developed mission-critical flight operations system using \textbf{C\#}, \textbf{.NET 8}, and \textbf{multithreading} for concurrent aircraft movement tracking via \textbf{Azure Service Bus}, \textbf{Event Grid}, \textbf{SignalR}
-    \item Architected \textbf{service-oriented architecture} with \textbf{Azure Entra ID SSO} and \textbf{RBAC} for 500 plus airport personnel, containerized with \textbf{Docker} and \textbf{Kubernetes}
-    \item Wrote \textbf{unit tests} using \textbf{MSTest} and \textbf{xUnit}; implemented automated \textbf{CI/CD pipelines} with \textbf{Azure DevOps} and blue-green deployments for zero-downtime releases
+    \item Automate end-to-end regression for the customer portal and admin console with Playwright and TypeScript across Chromium, Firefox and WebKit, gated in GitHub Actions on every pull request.
+    \item Cover sign-in, MFA setup with TOTP and role-based permissions for admin, owner, manager and basic users, plus WebSocket approval notifications and document-share requests.
+    \item Design and execute mobile test plans for the Flutter app on Android and iOS: ID capture with OCR extraction, document expiry, one-time QR codes, OTP rate limiting, session invalidation and back-button navigation.
+    \item Validate REST APIs with Postman and Bruno across roles \textendash\ authentication, MFA-gated sessions, device tracking and audit logs \textendash\ checking status codes and payloads against database state.
+    \item Report defects per GitHub issue with repro-video evidence and acceptance-criteria traceability, and maintain the Flutter regression and end-to-end suites.
 \end{itemize}
 
-\textbf{Airport Integration System -- Technical Lead, DevOps Engineer}
+\textbf{TP-Link (B2B) \textendash\ Loyalty Platform} \hfill \textit{Java, Selenium, TestNG, Maven, Postman, MySQL, JIRA}
+
 \begin{itemize}
-    \item Led development of deicing operations system with \textbf{SOA}-based microservices: \textbf{.NET 8 API}, \textbf{ASP.NET Information Services}, \textbf{Blazor Management UI}
-    \item Architected \textbf{Kubernetes} infrastructure on \textbf{Azure} and \textbf{on-premises} with \textbf{Helm Charts}, \textbf{Azure Entra ID}, \textbf{Key Vault}, and automated \textbf{CI/CD pipelines}
-    \item Applied \textbf{analytical skills} to monitor infrastructure using \textbf{HeadLamp}, \textbf{FreeLens}, \textbf{Azure Monitor} achieving 99.9 percent uptime for critical winter operations
+    \item Test partner registration and onboarding end to end: dependent state and city dropdowns, PAN, GSTIN and pincode validation and terms-and-conditions gating.
+    \item Validate the scheme, rebate and claim lifecycle: participation, multi-step claim submission, approvals, rewards history, rebate targets and bulk sales uploads.
+    \item Verify role-based access for partners, sales persons, RSMs and admins with MFA setup, audit logs and push, WhatsApp and email notifications on the mobile-first PWA.
+    \item Validate REST API requests with Postman, verify sales-trend, product-performance, city-wise and vertical-wise report accuracy, and automate regression cases with Java, Selenium and TestNG.
 \end{itemize}
 
-\jobentry{Software Engineer III}{Jan 2020 -- Feb 2022 (2 years 2 months)}{Concentrix, Gurgaon, India (Clients: 7-Eleven, VicRoads, Australian Government)}
+\entrysep
+\textbf{Pharmacy Website} \hfill \textit{Java, Selenium, TestNG, Maven, Postman, MySQL, JIRA, MS Excel}
 
-\textbf{Backend .NET Projects -- Backend Developer, Cloud Engineer}
 \begin{itemize}
-    \item Architected and maintained 10 plus \textbf{RESTful} and \textbf{SOAP Web APIs} using \textbf{C\#}, \textbf{.NET Core} serving 50,000 plus daily requests with 99.9 percent uptime on \textbf{AWS} and \textbf{Azure}
-    \item Implemented \textbf{multithreading} for high-throughput request processing; integrated \textbf{AWS CloudWatch} monitoring and \textbf{CloudTrail} logging reducing incident response time by 60 percent
-    \item Designed API security with \textbf{JWT authentication}, \textbf{OAuth 2.0}, and API rate limiting; wrote \textbf{unit tests} with \textbf{NUnit} and \textbf{MSTest} for all service layers
-    \item Delivered \textbf{service-oriented} enterprise solutions for retail (7-Eleven), road transport (VicRoads), and government sector clients
+    \item Perform functional, regression, smoke, sanity, integration, compatibility and accessibility testing.
+    \item Design and develop automation scripts using Java, Selenium and TestNG, with XPath and CSS expressions for identifying dynamic objects.
 \end{itemize}
 
-\textbf{Legacy Modernization Initiative -- Technical Lead, Migration Specialist}
+\entrysep
+\textbf{Ring Master \textendash\ Claims Audit and Filing Tool} \hfill \textit{Java, Selenium, TestNG, Postman, MySQL, JIRA}
+
 \begin{itemize}
-    \item Led migration of 5 legacy \textbf{ASP.NET Web Forms} applications to \textbf{.NET Core microservices} with \textbf{Entity Framework Core} and \textbf{Dapper}
-    \item Achieved 45 percent performance improvement and reduced hosting costs by 25 percent through cloud optimization
-    \item Mentored team of 5 junior developers establishing coding standards and \textbf{Git} branching strategies
-\end{itemize}
-
-\jobentry{Software Engineer II}{Aug 2016 -- Dec 2019 (3 years 5 months)}{Concentrix, Gurgaon, India (Client: Cigna -- US Healthcare)}
-
-\textbf{Smart Alec Legacy Migration -- .NET Developer, Migration Specialist}
-\begin{itemize}
-    \item Led migration of legacy \textbf{Smart Alec} application to modern \textbf{.NET} platform for Cigna US healthcare operations
-    \item Developed 8 mission-critical \textbf{WPF desktop applications} using \textbf{C\#}, \textbf{MVVM pattern}, \textbf{Prism framework}, and \textbf{multithreading} serving 500 plus daily users on \textbf{on-premises} infrastructure
-    \item Architected data access layer with \textbf{Entity Framework}, \textbf{LINQ}, and optimized \textbf{SQL Server} stored procedures improving query performance by 50 percent
-    \item Wrote \textbf{unit tests} using \textbf{MSTest} and applied \textbf{analytical skills} to diagnose and resolve complex production issues
-\end{itemize}
-
-\textbf{Data Processing Automation Framework -- Automation Engineer, Python Developer}
-\begin{itemize}
-    \item Created \textbf{Python} automation scripts with \textbf{Pandas}, \textbf{NumPy}, and \textbf{OpenPyXL} for ETL processes reducing manual work by 70 percent saving 20 plus hours weekly
-\end{itemize}
-
-\jobentry{Senior System Analyst}{Jun 2015 -- Aug 2016 (1 year 3 months)}{Artech L.L.C., Noida, India (Client: Cigna -- US Healthcare)}
-
-Continued development and enhancement of \textbf{Smart Alec} and \textbf{Auto Inventory Management System} for Cigna US healthcare operations. Led \textbf{SDLC} for major client projects achieving 95 percent client satisfaction. Created \textbf{Excel VBA} automation solutions and \textbf{EHLLAPI} integrations connecting mainframe systems with \textbf{Excel} frontends. Developed \textbf{MS Access} databases for business process optimization.
-
-\jobentry{MIS Executive}{Oct 2014 -- Jun 2015 (9 months)}{Jabong, Gurgaon, India}
-
-Designed \textbf{MS Access} database for inventory tracking with \textbf{Excel VBA} automation processing 10,000 plus daily transactions reducing manual effort by 80 percent and improving data accuracy to 99 percent.
-
-\jobentry{Senior Practitioner}{Oct 2012 -- Oct 2014 (2 years 1 month)}{IBM, Gurgaon, India (Client: Cigna -- US Healthcare)}
-
-\textbf{Auto Inventory Management System and Smart Alec -- Systems Developer}
-\begin{itemize}
-    \item Developed and maintained \textbf{Auto Inventory Management System} for Cigna US healthcare inventory tracking and management
-    \item Built \textbf{Smart Alec} application for streamlined US healthcare operations and workflow automation
-    \item Created \textbf{EHLLAPI}-based solutions integrating IBM mainframe systems with \textbf{Excel} frontends improving data retrieval speed by 60 percent
-    \item Developed 15 plus \textbf{Excel VBA} macros automating daily reports saving 25 plus hours weekly
+    \item Test the claims auditing workflow end to end: audit queue and claim selection, the audit form with its mandatory fields and validation rules, and submission of the completed audit details.
+    \item Validate the audit form behaviour and data handling: field-level validation messages, required-field enforcement, and the audit record and filing status produced by each submission.
+    \item Verify role-based access for auditor and admin users, and confirm submitted reimbursements and audit details are reflected correctly in claim records and reports.
+    \item Design and review test cases, test scenarios and test summary reports, log defects with proper root cause by analyzing application logs, and track them to closure in JIRA.
+    \item Execute functional, cross-browser and API testing with Postman, and design and maintain the automation suite using Java, Selenium and TestNG.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -173,7 +160,7 @@ Designed \textbf{MS Access} database for inventory tracking with \textbf{Excel V
 
 \sectionheader{Education}
 
-\textbf{Bachelor of Computer Application, Computer Science} -- Indira Gandhi National Open University \hfill 2007 -- 2010
+\textbf{Bachelor of Computer Applications, Computer Science} \textendash\ Indira Gandhi National Open University
 
 %----------------------------------------------------------------------------------------
 % CERTIFICATIONS
@@ -181,17 +168,14 @@ Designed \textbf{MS Access} database for inventory tracking with \textbf{Excel V
 
 \sectionheader{Certifications}
 
-AWS Certified Cloud Practitioner (BT986BBJEB11QFK5) -- Amazon Web Services\\
-Six Sigma Yellow Belt (YB/06/2016/924499) -- Concentrix | C-Sharp Certificate -- HackerRank
-
-LinkedIn Learning: \textbf{ASP.NET Core Test-Driven Development}, \textbf{Building Real-Time Web Apps with SignalR 2}, \textbf{Deploying AWS Applications with Docker}, \textbf{Learning Amazon Web Services for Developers}, \textbf{ASP.NET Core MVC}, \textbf{ASP.NET Core Razor Pages}, \textbf{ASP.NET Core New Features}, \textbf{Postman Essential Training}, \textbf{ML.NET Getting Started}
+Advanced Java | Advanced Excel with MIS Reporting and Dashboard
 
 %----------------------------------------------------------------------------------------
-% HONORS AND AWARDS
+% PERSONAL DETAILS
 %----------------------------------------------------------------------------------------
 
-\sectionheader{Honors and Awards}
+\sectionheader{Personal Details}
 
-Automation Wizard -- Concentrix (May 2016) | Unsung Hero -- Concentrix (May 2016)
+Languages: English, Hindi | Date of birth: 01 Feb 1989 | Nationality: Indian | Marital status: Married
 
 \end{document}

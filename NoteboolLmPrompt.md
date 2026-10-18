@@ -1,6 +1,6 @@
-# Resume Slide Deck — Wasim Akhtar
+# Resume Slide Deck — Waseem Raza
 
-Create a polished, professional slide deck presentation showcasing the career and technical expertise of **Wasim Akhtar**, a Senior Technical Lead with 12+ years of experience in cloud-native development, DevOps, and enterprise software.
+Create a polished, professional slide deck presentation showcasing the career and technical expertise of **Waseem Raza**, a QA Automation Engineer with hands-on experience across E-Commerce, B2B, Banking, Healthcare and Energy products, combining manual testing depth with Selenium WebDriver/Appium automation in Java, TestNG and Maven.
 
 ---
 
@@ -8,15 +8,15 @@ Create a polished, professional slide deck presentation showcasing the career an
 
 - **Color palette:** Dark navy or charcoal background with white text and a bold accent color (electric blue or teal) for highlights, icons, and section dividers
 - **Typography:** Clean sans-serif fonts (e.g., Inter, Montserrat, or Poppins). Large bold headlines, lighter weight body text
-- **Icons:** Use flat, minimal tech icons (cloud, containers, code brackets, database) to represent skill categories — no clipart
+- **Icons:** Use flat, minimal QA/tech icons (browser window, mobile phone, checkmark shield, bug, terminal, pipeline arrows) to represent skill categories — no clipart
 - **Layout:** Modern, editorial-inspired. Use generous whitespace, asymmetric grids, and strong visual hierarchy
-- **Imagery:** Abstract tech/data visuals or subtle gradient backgrounds — no stock photos of people
+- **Imagery:** Abstract tech/test-automation visuals or subtle gradient backgrounds — no stock photos of people
 
 ---
 
 ## Layout Approach
 
-- Use asymmetrical, dynamic compositions with a tech-professional aesthetic
+- Use asymmetrical, dynamic compositions with a QA-professional aesthetic
 - Vary text placement from slide to slide for visual interest
 - Layer icons, stat cards, and text in an editorial style
 - Include whitespace strategically for sophistication and readability
@@ -29,139 +29,149 @@ Create a polished, professional slide deck presentation showcasing the career an
 
 ### Slide 1 — Title
 
-- **Wasim Akhtar**
-- Technical Lead | Cloud Architect | DevOps Engineer
-- Noida, India
-- Contact: <wasim.akh2@gmail.com> | LinkedIn | GitHub
-- Subtle background graphic (circuit pattern or abstract mesh)
+- **Waseem Raza**
+- QA Automation Engineer | Selenium & Appium | Java | Manual + Automation Testing
+- New Delhi, India
+- Contact: <waseem.razain@gmail.com> | +91 9910813336 | LinkedIn | GitHub
+- Subtle background graphic (grid of test steps / terminal lines)
 
 ### Slide 2 — Professional Summary
 
-- Headline: "12+ years building enterprise systems — from mainframe integrations to cloud-native microservices"
+- **Headline:** "Manual testing depth, automation speed — quality engineered into every release"
 - 2–3 supporting bullets:
-  - Technical Lead at Coforge building mission-critical airport software for SITA
-  - AWS Certified Cloud Practitioner
-  - Expert in .NET 8, C# 11, ASP.NET, Blazor, Telerik, Azure, Kubernetes, Docker, CI/CD, and service-oriented architecture (SOA)
+  - QA Automation Engineer at DigiExcel Services, building and maintaining Selenium WebDriver and Appium automation with Java, TestNG and Maven, plus Playwright with TypeScript for web end-to-end suites
+  - Experience across E-Commerce, B2B, Banking, Healthcare and Energy domains; current project is the BitsProof Proof of ID platform (mobile Flutter app plus web portals), after the TP-Link B2B partner loyalty platform and a pharmacy e-commerce site
+  - Comfortable end to end: test strategy and test-case design, automated execution, functional/regression/integration/accessibility coverage, API testing with Postman and Bruno, defect reporting, and manual UI/UX validation
 
 ### Slide 3 — Career Timeline
 
 Visual horizontal timeline showing progression:
 
-- **2012–2014** — IBM (Sr. Practitioner) — VBA, Mainframe integrations
-- **2014–2015** — Jabong (MIS Executive) — Data automation
-- **2015–2016** — Artech/Cigna (Sr. System Analyst) — SDLC leadership
-- **2016–2019** — Concentrix/Cigna (Software Engineer II) — .NET, WPF, Python
-- **2020–2022** — Concentrix (Software Engineer III) — Cloud APIs, AWS, Azure
-- **2022–Present** — Coforge/SITA (Technical Lead) — Cloud-native airport systems
+- **Aug 2019 – Jun 2022** — QA Engineer, i3Infosoft Pvt Ltd (India, Remote) — test planning, manual testing, defect triage, Agile/Scrum delivery
+- **Jun 2022 – Present** — QA Automation Engineer, DigiExcel Services (New Friends Colony, New Delhi) — Selenium/Appium automation, framework maintenance, CI/CD integration
 
-### Slide 4 — Current Role Spotlight: Airport Technology
+Use two large stage cards on the timeline rather than a dense row of entries.
 
-Headline: "Building Software That Keeps Airports Running"
+### Slide 4 — Current Role Spotlight: DigiExcel Services
+
+Headline: "Automating Quality at DigiExcel Services"
 
 Four cards or panels:
 
-- **Airside Optimizer** — Ground operations optimization using .NET 8, C# 11, Blazor + Telerik UI, multithreading, and SOA with cloud + on-premises deployment
-- **Deicing Module** — Aircraft deicing operations, fluid tracking, compliance reporting with xUnit/NUnit unit testing (85% coverage)
-- **Electronic Flight Strip** — Real-time aircraft movement tracking with multithreading, MSTest/xUnit unit tests, and SOA
-- **Media Manager** — Airport configuration platform with Blazor + Radzen, REST/SOAP/gRPC, on-premises + Azure deployment
+- **Automation Scripts** — Design, develop and maintain automated test scripts with Selenium WebDriver and Appium for web and mobile applications
+- **Testing Strategy** — Collaborate with development teams to create and implement testing strategies
+- **Hybrid Framework** — Develop and enhance a hybrid automation framework with Maven, TestNG and the Page Object Model, including XPath and CSS selectors for dynamic objects
+- **Test Design** — Create detailed, comprehensive and well-structured test plans, test cases and test scenarios
 
-### Slide 5 — Technical Skills (Visual Grid)
+### Slide 5 — QA Automation Framework & CI/CD
+
+Diagram-style slide showing the automation lifecycle:
+
+- Framework layer: reusable Selenium WebDriver/Appium scripts built and maintained in Java, organised with TestNG, Maven and the Page Object Model
+- Locator layer: XPath and CSS selectors written for dynamic objects
+- Execution layer: automated test runs, result analysis, and reporting of findings to development teams
+- Pipeline layer: Jenkins and Git skills applied to continuous integration during the DigiExcel tenure
+- Maintenance loop: the hybrid framework extended for new tests and features as the product grows
+- Quality loop: manual testing for UI/UX quality that automation cannot judge
+
+### Slide 6 — Technical Skills (Visual Grid)
 
 Organized into icon-labeled categories:
 
-- **Languages:** C# 11, Python, JavaScript, VB.NET, VBA
-- **Frameworks:** .NET 8, .NET Core, ASP.NET MVC, Blazor, Telerik UI for Blazor, Entity Framework, Angular, MAUI, SignalR, REST APIs, SOAP, gRPC
-- **Cloud & On-Prem:** Azure (AKS, Entra ID, Key Vault, Service Bus, Blob Storage, CDN), AWS (CloudWatch, EC2), On-Premises Deployment
-- **DevOps:** Docker, Kubernetes, Helm, CI/CD, Azure DevOps, Git, GitHub Actions
-- **Databases:** SQL Server, Redis, Dapper, EF Core, ADO.NET, LINQ
-- **Architecture:** Microservices, Service-Oriented Architecture (SOA), Event-Driven, MVVM, TDD, Agile/Scrum
-- **Testing:** Unit Testing (xUnit, NUnit, MSTest), Test-Driven Development
-- **Desktop:** WPF, WinForms, Desktop Application Development, Prism Framework
-- **Core Skills:** Multithreading, Analytical Skills, OOP
+- **Automation:** Selenium WebDriver, Appium, Playwright, TestNG, Maven, Page Object Model (POM), hybrid automation framework design and maintenance, automated test script development
+- **Testing types:** Manual, functional, regression, smoke, sanity, integration, end-to-end, cross-browser compatibility, accessibility, API, mobile application testing (native, hybrid, web-based; APK, iOS)
+- **Tools, programming & database:** Postman, Bruno, JIRA, Jenkins, Git, GitHub, GitHub Actions, MS Excel, GitHub Copilot, Java, TypeScript, Python, SQL, MySQL, XPath, CSS selectors, Flutter
+- **Process & methodologies:** test plan and test case design, test case review, test scenarios, test execution, test reporting, test summary reports, requirement analysis, defect logging and reporting, SDLC, STLC, Agile, Scrum, CI/CD
+- **Domains:** E-Commerce, B2B, Banking, Healthcare, Energy
 
-### Slide 6 — Cloud & DevOps Architecture
+### Slide 7 — Test Design & Execution
 
-Diagram-style slide showing:
+Headline: "From Test Plan to Verified Release"
 
-- Service-oriented architecture (SOA) and microservices deployed on Azure Kubernetes Service and on-premises infrastructure
-- Docker containers orchestrated with Helm Charts
-- CI/CD pipelines with Azure DevOps and Git-based workflows
-- Azure Entra ID + Key Vault for security
-- Azure Service Bus + Event Grid for event-driven messaging; SOAP + REST + gRPC for service communication
-- Blue-green deployments for zero-downtime releases
-- Unit testing with xUnit, NUnit, MSTest integrated into CI/CD
-- Multithreading for high-throughput concurrent processing
-- 99.9% uptime achieved across cloud and on-prem environments
+- Detailed, comprehensive, and well-structured test plans and test cases
+- Test cases maintained and updated as new features and updates ship
+- Automated suites executed continuously; results analysed and findings reported to the teams that need them
+- Manual passes focused on user interface and user experience quality
+- Defects identified, reported, and troubleshot together with development teams
 
-### Slide 7 — Impact By Numbers
+### Slide 8 — Projects & Coverage
 
-Large, bold stat cards:
+Three project cards plus a coverage strip (current project first):
 
-- **50,000+** daily API requests at 99.9% uptime (REST + SOAP)
-- **85%** unit test coverage with xUnit, NUnit, MSTest
-- **70%** reduction in manual work via Python automation
-- **45%** performance improvement from legacy migration to .NET 8
-- **60%** faster incident response with CloudWatch
-- **20+ hrs/week** saved through ETL automation
-- **500+** daily users on WPF desktop applications (on-prem)
+**BitsProof — Proof of ID Platform (Current)** — *Tools: Playwright, TypeScript, Postman, Bruno, Python, GitHub Actions*
+- Web end-to-end regression for the customer portal and admin console automated in Playwright with TypeScript, run on Chromium, Firefox and WebKit and gated in GitHub Actions on every pull request
+- Sign-in, MFA with TOTP and role-based permissions for admin, owner, manager and basic users; WebSocket approval notifications; document-share requests
+- Mobile test plans for the Flutter app on Android and iOS: ID capture with OCR extraction, document expiry, one-time QR codes, OTP rate limiting, session invalidation, back-button navigation
+- REST API validation with Postman and Bruno across roles (authentication, device tracking, audit logs) with status/payload checks against database state, and Python TOTP scripts for MFA-gated sessions
+- Defects reported per GitHub issue with repro-video evidence and acceptance-criteria traceability; Flutter regression and end-to-end suites maintained
 
-### Slide 8 — Legacy Modernization
+**TP-Link (B2B) — Loyalty Platform** — *Tools: Java, Selenium, TestNG, Maven, Postman, MySQL, JIRA*
+- Partner registration and onboarding end to end: dependent state/city dropdowns, PAN, GSTIN and pincode validation, terms-and-conditions gating
+- Scheme, rebate and claim lifecycle: participation, multi-step claim submission, approvals, rewards history, rebate targets, bulk sales uploads
+- Role-based access for partners, sales persons, RSMs and admins with MFA setup, audit logs and push, WhatsApp and email notifications; REST API validation with Postman and report accuracy checks
 
-Headline: "Bridging the Old and New"
+**Pharmacy Website** — *Tools: Java, Selenium, TestNG, Postman, MySQL, JIRA, MS Excel*
+- Functional, regression, smoke, sanity, integration, compatibility and accessibility testing
+- Selenium and TestNG automation with XPath/CSS expressions for dynamic objects
 
-Before/After comparison layout:
+Coverage strip: **Web** (Selenium WebDriver, Playwright), **Mobile** (Appium, Flutter app on Android and iOS), **API** (Postman, Bruno).
 
-- Migrated 5 ASP.NET Web Forms apps to .NET 8 / .NET Core microservices with SOA patterns
-- Integrated Entity Framework Core + Dapper for SQL Server data access
-- Added comprehensive unit testing with NUnit and MSTest
-- 45% performance gain, 25% hosting cost reduction
-- Mentored team of 5 developers on modern practices, Git workflows, and TDD
+Note: no fabricated metrics or client names — describe coverage in capability terms only.
 
-### Slide 9 — Multi-Industry Experience
+### Slide 9 — Tools & Daily Workflow
 
-Industry icon grid:
+Icon strip with one-line explanations:
 
-- **Aviation** — SITA (airport operations, real-time systems)
-- **Healthcare** — Cigna (US healthcare operations, compliance)
-- **Retail** — 7-Eleven (backend APIs, high-traffic systems)
-- **Government** — VicRoads, Australian Government (enterprise solutions)
-- **E-Commerce** — Jabong (inventory management, data processing)
+- **Java + Maven + TestNG** — automation code, dependency/build management, and suite organisation
+- **Playwright + TypeScript** — web end-to-end automation across Chromium, Firefox and WebKit, run from CI
+- **Python** — supporting scripts that generate MFA/TOTP codes so MFA-gated sessions can be tested
+- **Selenium WebDriver / Appium** — web and mobile drivers behind the test scripts, structured with the Page Object Model
+- **Git / GitHub / GitHub Actions** — version control, pull-request review, and the CI jobs that gate every change
+- **Jenkins** — continuous-integration skills built on the job
+- **JIRA** — defect logging, tracking to closure, and sprint work items
+- **MySQL / SQL** — database checks behind the tested flows
+- **Postman / Bruno** — API request collections and verification
+- **GitHub Copilot** — AI-assisted test code authoring and refactoring
 
-### Slide 10 — Education & Certifications
+### Slide 10 — Agile Delivery & Collaboration
 
-Two columns:
+- Active participation in Agile/Scrum ceremonies
+- QA perspective contributed during sprint planning so testability is designed in early
+- Continuous collaboration with development teams on testing strategies and defect resolution
+- Continuous learning: stays up to date with new testing tools and test strategies
+
+### Slide 11 — Education, Certifications, Languages & Details
 
 **Education:**
 
-- MCA, Computer Science — Karnataka State Open University (2014–2016)
-- BCA, Computer Science — IGNOU (2007–2010)
+- Bachelor of Computer Applications, Computer Science — Indira Gandhi National Open University
 
 **Certifications:**
 
-- AWS Certified Cloud Practitioner
-- Six Sigma Yellow Belt — Concentrix
-- C# Certificate — HackerRank
-- LinkedIn Learning: TDD, SignalR, Docker on AWS, ASP.NET Core, ML.NET
+- Advanced Java
+- Advanced Excel with MIS Reporting and Dashboard
 
-### Slide 11 — Awards & Recognition
+**Languages:**
 
-- **Automation Wizard** — Concentrix (May 2016)
-- **Unsung Hero** — Concentrix (May 2016)
-- Brief note on mentoring and cross-functional collaboration
+- English
+- Hindi
+
+Supporting detail (small type, optional): based in New Delhi, 110025, India.
 
 ### Slide 12 — Contact / Let's Connect
 
-- Clean closing slide with name, email, LinkedIn, GitHub
-- Tagline: "From mainframe macros to cloud-native microservices — 12+ years of building what matters."
-- Key strengths: .NET 8, C# 11, Blazor + Telerik, SOA, Unit Testing, Multithreading, Cloud + On-Prem
+- Clean closing slide with name, email, phone, and LinkedIn/GitHub handles
+- Tagline: "Quality is not an afterthought — it is built into every pipeline."
+- Key strengths: Selenium WebDriver, Appium, Playwright with TypeScript, TestNG, Java, Maven, Page Object Model, Postman, Bruno, MySQL, JIRA, Jenkins, GitHub Actions, manual testing, Agile/Scrum, mobile Flutter testing
 
 ---
 
 ## Design Principles
 
 - Every slide should communicate ONE key idea — no walls of text
-- Use data visualization (timelines, stat cards, grids) instead of paragraphs
+- Use data visualization (timelines, capability panels, grids) instead of paragraphs
 - Maintain consistent spacing, alignment, and color usage across all slides
 - Keep bullet points to 3–5 per slide maximum
 - Headlines should be punchy and benefit-oriented, not generic
 - Maintain a cohesive visual identity while ensuring each slide feels fresh and engaging
+- Never invent metrics, employers, certifications, or dates that are not in the source resume
